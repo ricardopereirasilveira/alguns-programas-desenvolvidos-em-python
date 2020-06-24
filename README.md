@@ -1,2 +1,3 @@
 # alguns-programas-desenvolvidos-em-python
-Alguns programas que eu desenvolvi em Python no decorrer do tempo para aprendizado.
+Aqui estão alguns programados em Python desenvolvido em DOS (linha) apenas para aprendizagem de Python.
+Programas mais complexos podem ser verificar em outras pastas!
