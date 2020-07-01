@@ -6,13 +6,33 @@
 # Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;
 # Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1.
 
-saque = int(input('Digite o valor do Saque: '))
-numSaque= str(saque)
-calculandoRestoMilhar = saque // 1000 % 10
-x = saque
+saque = int(input("Digite o valor do saque: "))
 
-if saque >= 10:
-    if saque % 10 == 0:
-        notaCem = saque / 100
-        print('Nota de R$ 100 = {:.0}'.format(notaCem)
-    saque = (100 - notaCem)
+if 10 <= saque <= 600:
+    notas_cem = saque // 100
+    saque = saque % 100
+
+    notas_cinquenta = saque // 50
+    saque = saque % 50
+
+    notas_dez = saque // 10
+    saque = saque % 10
+
+    notas_cinco = saque // 5
+    saque = saque % 5
+
+    notas_um = saque // 1
+
+    if notas_cem > 0:
+        print(notas_cem, "notas de R$ 100")
+    if notas_cinquenta > 0:
+        print(notas_cinquenta, "notas de R$ 50")
+    if notas_dez > 0:
+        print(notas_dez, "notas de R$ 10")
+    if notas_cinco > 0:
+        print(notas_cinco, "notas de R$ 5")
+    if notas_um > 0:
+        print(notas_um, "notas de R$ 1")
+              
+else:
+    print("Nao é possivel fazer o saque")
